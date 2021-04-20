@@ -1,4 +1,4 @@
-# webdev
+# Web Dev Final Project: Georgina's Kitchen Website
 Web development project. Website for a small bakery business.
  
  
