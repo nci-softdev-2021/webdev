@@ -1,1 +1,212 @@
-test test!!!!!
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link href="B1.css" rel="stylesheet"/>
+<title></title>
+
+<div class="navi">
+  <a href="#">Home</a>
+  <a class="active" href="#">About Us</a>
+  <a href="#">Our Cakes</a>
+  <a href="#">Order Now</a>
+</div>
+
+
+</head>
+
+
+<body>		
+							
+							
+							<div class="backDiv">
+							<div class="center"> 
+							<h2> Order a cake </h2>
+							</div> 
+
+				<form name="myForm" onsubmit="return validateForm()" method="post" required>
+
+
+				<table class="centertable">
+					
+				
+				<tr>
+				<td><label class="firstname"><b>Firstname:</b></label></td>
+				<td><input type= "text" name="firstname" size= "50" value=""/></td>
+				</tr>
+
+				<tr>
+				<td><label class="surname"><b>Surname:</b></label></td>
+				<td><input type= "text" name="surname" size= "50" value=""/></td>
+				</tr>
+
+				<tr>
+				<td><label class="number"><b>Phone number:</b></label></td>
+				<td><input type= "text" name="number" size= "50" value=""/></td>
+				</tr>
+
+				<tr>
+				<td>
+				<label for="email"><b>E-mail Address:</b></label></td>
+				<td><input type= "text" id= "email" name="email" size= "50" </td>
+				
+				</tr>
+
+
+				<tr>
+				<td><b>Cake:</b></td>
+				<td><select id ="cake" onchange="document.getElementById("cake");">
+				<option value="Cake1">Cake 1</option>
+				<option value="Cake2">Cake 2</option>
+				<option value="Cake3">Cake 3</option>
+				<option value="Cake4">Cake 4</option>
+				<option value="Cake5">Cake 5</option>
+				<option value="Cake6">Cake 6</option>
+				</select>  </td>
+				</tr>
+			
+				<tr>
+				<td><b>Size:</b></td>
+				<td><select id ="size" onchange="document.getElementById("size");">
+				<option value="feeds6">feeds 8</option>
+				<option value="feeds12">feeds 12</option>
+				</select>  </td>
+				</tr>
+
+				<tr>
+				<td><b>Chocolate message:</b></td>
+				<td><select id ="message" onchange="document.getElementById("message");">
+				<option value="No">No</option>
+				<option value="Yes">Yes</option>
+				</select>  </td>
+				</tr>
+
+
+
+				<tr>
+				<td><label class="choc"><b>Your message:</b></label></td>
+				<td><textarea name="choc" cols="25" rows="5"></textarea></td>
+				</tr>
+
+				<tr>
+				<td><b>Free topper:</b></td>
+				<td><select id ="topper" onchange="document.getElementById("topper");">
+				<option value="Happy Birthday">Happy Birthday</option>
+				<option value="Happy Aniversary">Happy Aniversary</option>
+				<option value="Congratulations">Congratulations</option>
+				<option value="Baby boy">Baby boy</option>
+				<option value="Baby girl">Baby girl</option>
+				</select>  </td>
+				</tr>
+
+				<tr>
+				<td><b>Pick up time:</b><br>*Next day</td>
+				<td><select id ="time" onchange="document.getElementById("time");">
+				<option value="1">9am-11am</option>
+				<option value="2">11am-1pm</option>
+				<option value="3">1pm-3pm</option>
+				<option value="4">3pm-5pm</option>
+				</select>  </td>
+				</tr>
+
+				<tr>
+ 				<td><input type="button" value="Calculate cost" onclick="myCal()"</button><p id="cal"></p></td>
+				</tr>
+			
+				<tr>
+				<td><label class="form_submit"><b><input type="submit" value="Submit"></td>
+				</tr>
+		
+			</table>
+			
+			</form> 
+
+			</div>
+			
+
+</body>
+  			<script>
+
+		function validateForm() {
+		var b = document.forms["myForm"]["surname"].value;
+ 		var a = document.forms["myForm"]["firstname"].value;
+		var d = document.forms["myForm"]["number"].value;
+		var e = document.forms["myForm"]["choc"].value;
+		var c = document.forms["myForm"]["email"].value;
+		var mailformat = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+  		if (a == "") {
+ 		alert("Firstname must be filled out");
+    		return false;
+ 	
+			}else if (b == "") {
+ 			alert("Surname must be filled out");
+    			return false;
+
+			}else if (d == "") {
+ 			alert("Number must be filled in");
+    			return false;
+
+			}else if (isNaN(d) ||  d % 1 != 0 || d.length < 10) {
+   	    	        alert ("Phone number contain at least 10 numbers and no spaces or characters");
+  	    		   return false;
+
+			}else if ((document.getElementById("message").value == "Yes") && (e == "")) {
+ 			alert("Please fill out message");
+    			return false;
+
+			}else if ((document.getElementById("message").value == "Yes") && (e.length > 30)) {
+ 			alert("Max 30 characters in message");
+    			return false;
+
+			}else if ((document.getElementById("message").value == "No") && (e !== "")) {
+ 			alert("You ticked no message");
+    			return false;
+
+			}else if(c.match(mailformat))
+			{return true;
+			}else{
+			alert("You have entered an invalid email address!");    
+			return false;
+		}
+	}
+
+
+
+
+	function myCal() {
+		
+		var p;
+
+	 	 if (document.getElementById("cake").value == "Cake1") { 
+   		  p =  14;
+    	 	 } else if (document.getElementById("cake").value == "Cake2") {
+         	 p = 16;
+	         } else if (document.getElementById("cake").value == "Cake3") {
+         	 p = 16;
+		 } else if (document.getElementById("cake").value == "Cake4") {
+         	 p = 18;
+   	 	 } else {
+   	 	 p =20;
+        	 }
+		 if (document.getElementById("size").value == "feeds12") { 
+ 	         p = (p + (p/4)); 
+ 		 } else {
+ 	  	 p = p;   
+ 	 	 }
+		if (document.getElementById("message").value == "Yes") { 
+ 	         p = (p + 4); 
+		}
+		else{
+		p = p;
+		}
+ 		 document.getElementById("cal").innerHTML="Your total is " + "€" + p;
+   
+ 	  	 }
+	
+
+			
+</script>
+
+
+</html>
