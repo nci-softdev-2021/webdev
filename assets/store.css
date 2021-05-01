@@ -74,7 +74,7 @@ p, a, label, input, span, small, td, address {
     background-color: var(--accent-bg-color);
 }
 
-.accent {
+.accent, .card {
     background-color: var(--accent-bg-color);
 }
 
