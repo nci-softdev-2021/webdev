@@ -5,6 +5,8 @@
 
 h1, h2, h3 {
     font-family: 'Dancing Script', cursive;
+    color: var(--main-bg-color);
+    padding-bottom: 5%;
 }
 
 * {
@@ -45,21 +47,14 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #000;
-    background-color: var(--accent-bg-color);
 }
 
 .logo img {
     float: left;
-    background-color: var(--accent-bg-color);
 }
 
 p, a, label, input, span, small, td, address {
-    font-size: 11pt;
     font-family: "Noto Sans SC", sans-serif;
-}
-
-h2 {
-    font-size: 20pt;
 }
 
 .container {
@@ -76,7 +71,10 @@ h2 {
     height: 350px;
     float: left;
     text-align: center;
-    border: 2px solid var(--main-bg-color);
+    background-color: var(--accent-bg-color);
+}
+
+.accent {
     background-color: var(--accent-bg-color);
 }
 
@@ -86,4 +84,13 @@ footer {
     width: 100%;
     color: #000;
     padding: 8px 12px;
+    background-color: var(--accent-bg-color);
+    text-align: center;
+}
+
+footer .underline {
+    display: block;
+    border-width: 0;
+    border-bottom: 1px solid #fff;
+    margin: 0 16px;
 }
