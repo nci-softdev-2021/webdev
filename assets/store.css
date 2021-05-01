@@ -3,7 +3,7 @@
     --accent-bg-color: #936147;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: 'Dancing Script', cursive;
 }
 
@@ -23,7 +23,7 @@ header {
     width: 100%;
     height: auto;
     display: inline-block;
-    background-color: var(--main-bg-color);
+    background-color: var(--accent-bg-color);
 }
 
 nav {
@@ -53,7 +53,7 @@ nav ul li a:hover {
     background-color: var(--accent-bg-color);
 }
 
-h1, h2, p, a, label, input, span, small, td, address {
+p, a, label, input, span, small, td, address {
     font-size: 11pt;
     font-family: "Noto Sans SC", sans-serif;
 }
