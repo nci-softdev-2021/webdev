@@ -1,0 +1,76 @@
+.navi {
+    width: 100%;
+    background-color: #800000;
+    overflow: auto;
+  }
+  
+  /* Center align table */
+  .centertable {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 0px 15px;
+    color: #93c572;
+  }
+  
+  .center {
+   text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  /* Navigation links */
+  .navi a {
+    float: left;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 22%; 
+  }
+  
+  /* Add a background color on mouse-over */
+  .navi a:hover {
+    background-color: black;
+    cursor: pointer;
+  }
+  
+  /* Style the current/active link */
+  .navi a.active {
+    background-color: black;
+  }
+  
+  
+  .backDiv{ 
+   width:100%; 
+   background: url("cake.jpeg") 50% 0 no-repeat fixed; 
+   background-size:cover;
+   color: white;
+  }
+  
+  input[type=button] {
+    background-color: #800000;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input[type=submit] {
+    background-color: #800000;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  
