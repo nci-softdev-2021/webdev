@@ -1,0 +1,89 @@
+:root {
+    --main-bg-color: #fce9b5;
+    --accent-bg-color: #936147;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+    background-color: var(--main-bg-color);
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: var(--main-bg-color);
+}
+
+nav {
+    float: right;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 14pt;
+    float: left;
+    padding: 20px 8px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #000;
+    background-color: var(--accent-bg-color);
+}
+
+.logo img {
+    float: left;
+    background-color: var(--accent-bg-color);
+}
+
+h1, h2, p, a, label, input, span, small, td, address {
+    font-size: 11pt;
+    font-family: "Noto Sans SC", sans-serif;
+}
+
+h2 {
+    font-size: 20pt;
+}
+
+.container {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    transform: translate(50%, 50%);
+}
+
+.showcase {
+    width: 50%;
+    height: 350px;
+    float: left;
+    text-align: center;
+    border: 2px solid var(--main-bg-color);
+    background-color: var(--accent-bg-color);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #000;
+    padding: 8px 12px;
+}
