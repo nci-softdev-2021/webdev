@@ -37,6 +37,7 @@
     font-size: 17px;
     width: 22%; 
   }
+
   
   /* Add a background color on mouse-over */
   .navi a:hover {
@@ -52,7 +53,7 @@
   
   .backDiv{ 
    width:100%; 
-   background: url("cake.jpeg") 50% 0 no-repeat fixed; 
+   background: url("assets/cake.jpg") 50% 0 no-repeat fixed; 
    background-size:cover;
    color: white;
   }
