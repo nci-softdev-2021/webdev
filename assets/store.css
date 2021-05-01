@@ -2,6 +2,8 @@
 {
     --main-bg-color: #fce9b5;
     --accent-bg-color: #936147;
+    --secondary-color: #F7EBD9;
+    --secondary-accent-color: #D39F79;
 }
 h1, h2, h3
 {
@@ -45,8 +47,12 @@ nav ul li a
     padding: 20px 8px;
     text-decoration: none;
 }
-nav ul li a:hover
-{
+
+nav ul li a.active {
+    color: var(--main-bg-color);
+}
+
+nav ul li a:hover {
     color: #000;
 }
 .logo img
@@ -109,8 +115,22 @@ p, a, label, input, span, small, td, address
 {
     background-color: var(--accent-bg-color);
 }
-footer
-{
+
+.subtitle {
+    background-color: var(--secondary-accent-color);
+}
+
+.subtitle h1 {
+    text-align: center;
+    padding: 5%;
+}
+
+.btn-order {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -126,6 +146,7 @@ footer .underline
     border-bottom: 1px solid #fff;
     margin: 0 16px;
 }
+
 #products footer
 {
   position: static;
@@ -150,4 +171,7 @@ footer .underline
   margin: 0 auto;
   display: block;
 }
+}
+.card-title {
+    text-align: center;
 }
