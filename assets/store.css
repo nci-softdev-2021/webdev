@@ -141,3 +141,11 @@ footer .underline
 .card-title {
     text-align: center;
 }
+
+.backDiv{ 
+    width:100%; 
+    background: url("cake.jpg") 50% 0 no-repeat fixed; 
+    background-size:cover;
+    color: white;
+   }
+ 
