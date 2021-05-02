@@ -147,5 +147,16 @@ footer .underline
     background: url("cake.jpg") 50% 0 no-repeat fixed; 
     background-size:cover;
     color: white;
-   }
- 
+}
+
+.img__container {
+    position: relative;
+    overflow: hidden;
+  }
+  .img__container img {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    width: 0;
+    object-fit: cover;
+  }
