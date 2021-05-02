@@ -3,18 +3,17 @@
 
 <head>
 	<link href="B1.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link href="assets/store.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/site.webmanifest">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link href="assets/store.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	<link rel="manifest" href="assets/site.webmanifest">
 	<title>Georgina Bakes Order</title>
-
 	<div class="navi">
 		<a href="#">Home</a>
 		<a href="#">About us</a>
@@ -25,143 +24,86 @@
 
 <body class="d-flex flex-column h-100">
 	<div class="backDiv">
-		<div class="center">
-			<h2> Order a cake </h2>
+		<div class="container">
+			<div class="center">
+				<h2> Order a cake </h2>
+			</div>
+			<form name="myForm" onsubmit="return validateForm()" method="post" required>
+				<label for="firstname" class="form-label"><b>Firstname:</b></label>
+				<input type="text" name="firstname" size="50" value="" /><label class="surname"><b>Surname:</b></label>
+				<input type="text" name="surname" size="50" value="" />
+				<label class="number"><b>Phone number:</b></label>
+				<input type="text" name="number" size="50" value="" />
+				<label for="email"><b>E-mail Address:</b></label>
+				<input type="text" id="email" name="email" size="50">
+				<b>Cake:</b>
+				<select id="cake">
+					<option value="Cake6">Black Forest Gateaux</option>
+					<option value="Cake2">Carrot cake</option>
+					<option value="Cake1">Cheesecake</option>
+					<option value="Cake3">Red velvet</option>
+					<option value="Cake4">Tiramisu</option>
+					<option value="Cake5">Victoria Sponge</option>
+				</select>
+				<b>Size:</b>
+				<select id="size">
+					<option value="feeds6">feeds 8</option>
+					<option value="feeds12">feeds 12</option>
+				</select>
+				<b>Chocolate message:</b>
+				<select id="message">
+					<option value="No">No</option>
+					<option value="Yes">Yes</option>
+				</select>
+				<label class="choc"><b>Your message:</b></label>
+				<textarea name="choc" cols="25" rows="5"></textarea>
+				<b>Free topper:</b>
+				<select id="topper">
+					<option value="Happy Birthday">Happy Birthday</option>
+					<option value="Happy Aniversary">Happy Aniversary</option>
+					<option value="Congratulations">Congratulations</option>
+					<option value="Baby boy">Baby boy</option>
+					<option value="Baby girl">Baby girl</option>
+					<option value="None">None</option>
+				</select>
+				<b>Pick or Delivery:</b><br>*Galway city only(€5)
+				<select id="which">
+					<option value="pickup">Pick-up</option>
+					<option value="delivery">Delivery</option>
+					<b>Pick up/Delivery time:</b><br>*Next day
+					<select id="time">
+						<option value="1">9am-11am</option>
+						<option value="2">11am-1pm</option>
+						<option value="3">1pm-3pm</option>
+						<option value="4">3pm-5pm</option>
+					</select>
+					<label class="housenumber"><b>Address 1:</b></label>
+					<input type="text" name="housenumber" size="50" value="" />
+					<label class="street"><b>Address 2:</b></label>
+					<input type="text" name="street" size="50" value="" />
+					<label class="city"><b>City:</b></label>
+					<input type="text" name="city" placeholder="Galway" size="50" value="" />
+					<input type="button" value="Calculate cost" onclick="myCal()"> </button>
+					<p id="cal"></p>
+					<label class="form_submit"><b><input type="submit" value="Submit">
+							</tbody>
+							</table>
+			</form>
 		</div>
-
-		<form name="myForm" onsubmit="return validateForm()" method="post" required>
-			<table class="centertable">
-				<tbody>
-					<tr>
-						<td><label class="firstname"><b>Firstname:</b></label></td>
-						<td><input type="text" name="firstname" size="50" value="" /></td>
-					</tr>
-					<tr>
-						<td><label class="surname"><b>Surname:</b></label></td>
-						<td><input type="text" name="surname" size="50" value="" /></td>
-					</tr>
-
-					<tr>
-						<td><label class="number"><b>Phone number:</b></label></td>
-						<td><input type="text" name="number" size="50" value="" /></td>
-					</tr>
-
-					<tr>
-						<td>
-							<label for="email"><b>E-mail Address:</b></label>
-						</td>
-						<td><input type="text" id="email" name="email" size="50" </td>
-
-					</tr>
-
-
-					<tr>
-						<td><b>Cake:</b></td>
-						<td><select id="cake" onchange="document.getElementById(" cake");">
-							<option value="Cake6">Black Forest Gateaux</option>
-							<option value="Cake2">Carrot cake</option>
-							<option value="Cake1">Cheesecake</option>
-							<option value="Cake3">Red velvet</option>
-							<option value="Cake4">Tiramisu</option>
-							<option value="Cake5">Victoria Sponge</option>
-						</select> </td>
-					</tr>
-
-					<tr>
-						<td><b>Size:</b></td>
-						<td><select id="size" onchange="document.getElementById(" size");">
-								<option value="feeds6">feeds 8</option>
-								<option value="feeds12">feeds 12</option>
-							</select> </td>
-					</tr>
-
-					<tr>
-						<td><b>Chocolate message:</b></td>
-						<td><select id="message" onchange="document.getElementById('message');">
-								<option value="No">No</option>
-								<option value="Yes">Yes</option>
-							</select> </td>
-					</tr>
-
-
-
-					<tr>
-						<td><label class="choc"><b>Your message:</b></label></td>
-						<td><textarea name="choc" cols="25" rows="5"></textarea></td>
-					</tr>
-
-					<tr>
-						<td><b>Free topper:</b></td>
-						<td><select id="topper" onchange="document.getElementById(" topper");">
-								<option value="Happy Birthday">Happy Birthday</option>
-								<option value="Happy Aniversary">Happy Aniversary</option>
-								<option value="Congratulations">Congratulations</option>
-								<option value="Baby boy">Baby boy</option>
-								<option value="Baby girl">Baby girl</option>
-								<option value="None">None</option>
-							</select> </td>
-					</tr>
-
-					<tr>
-						<td><b>Pick or Delivery:</b><br>*Galway city only(€5)</td>
-						<td><select id="which" onchange="document.getElementById(" which");">
-								<option value="pickup">Pick-up</option>
-								<option value="delivery">Delivery</option>
-					</tr>
-
-					<tr>
-						<td><b>Pick up/Delivery time:</b><br>*Next day</td>
-						<td><select id="time" onchange="document.getElementById(" time");">
-								<option value="1">9am-11am</option>
-								<option value="2">11am-1pm</option>
-								<option value="3">1pm-3pm</option>
-								<option value="4">3pm-5pm</option>
-							</select> </td>
-					</tr>
-
-					<tr>
-						<td><label class="housenumber"><b>Address 1:</b></label></td>
-						<td><input type="text" name="housenumber" size="50" value="" /></td>
-					</tr>
-
-					<tr>
-						<td><label class="street"><b>Address 2:</b></label></td>
-						<td><input type="text" name="street" size="50" value="" /></td>
-					</tr>
-
-					<tr>
-						<td><label class="city"><b>City:</b></label></td>
-						<td><input type="text" name="city" placeholder="Galway" size="50" value="" /></td>
-					</tr>
-
-
-					<tr>
-						<td><input type="button" value="Calculate cost" onclick="myCal()"> </button>
-							<p id="cal"></p>
-						</td>
-					</tr>
-
-					<tr>
-						<td><label class="form_submit"><b><input type="submit" value="Submit"></td>
-					</tr>
-				</tbody>
-			</table>
-		</form>
 	</div>
 	<footer class="footer mt-auto py-3 text-center">
-        <!---
+		<!---
           place for social networks
           <div class="underline"></div>
         -->
-        <div class="container">
-          <span>
-            Copyright &copy; 2021 Georgina's kitchen
-          </span>
-        </div>
-      </footer>
+		<div class="container">
+			<span>
+				Copyright &copy; 2021 Georgina's kitchen
+			</span>
+		</div>
+	</footer>
 </body>
 <script>
-
 	function validateForm() {
 		var b = document.forms["myForm"]["surname"].value;
 		var a = document.forms["myForm"]["firstname"].value;
@@ -173,68 +115,52 @@
 		var h = document.forms["myForm"]["city"].value;
 		var i = "Galway";
 		var mailformat = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
 		if (a == "") {
 			alert("Firstname must be filled out");
 			return false;
-
 		} else if (b == "") {
 			alert("Surname must be filled out");
 			return false;
-
 		} else if (d == "") {
 			alert("Number must be filled in");
 			return false;
-
 		} else if (isNaN(d) || d % 1 != 0 || d.length < 10) {
 			alert("Phone number contain at least 10 numbers and no spaces or characters");
 			return false;
-
 		} else if ((document.getElementById("message").value == "Yes") && (e == "")) {
 			alert("Please fill out message");
 			return false;
-
 		} else if ((document.getElementById("message").value == "Yes") && (e.length > 30)) {
 			alert("Max 30 characters in message");
 			return false;
-
 		} else if ((document.getElementById("message").value == "No") && (e !== "")) {
 			alert("You selceted 'no message'. Please remove message or select 'message'.");
 			return false;
-
 		} else if ((document.getElementById("which").value == "delivery") && ((f == "") || (g == ""))) {
 			alert("Please fill in address");
 			return false;
-
 		} else if ((document.getElementById("which").value == "delivery") && h.toLowerCase() !== i.toLowerCase()) {
 			alert("We only deliver within Galway city please make sure you have filled in 'Galway' for city");
 			return false;
-
 		} else if ((document.getElementById("which").value == "pickup") && ((f !== "") || (g !== "") || (h !== ""))) {
 			alert("You selected pick up. Please remove address or select 'delivery.'");
 			return false;
-
 		} else if (!c.match(mailformat)) {
 			alert("Enter a valid email");
 			return false;
-
 		} else if (c.match(mailformat)) {
 			var txt;
 			var r = confirm("Would you like to confirm your order??");
-
 			if (r == true) {
 				alert("You submitted order");
 				return true;
 				alert("You submitted order");
 			} else {
-
 				alert("You cancelled order");
 				return false;
 			}
-
 		}
 	}
-
 	function myCal() {
 		var p;
 		if (document.getElementById("cake").value == "Cake1") {
