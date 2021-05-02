@@ -13,125 +13,185 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 	<link rel="manifest" href="assets/site.webmanifest">
 	<title>Georgina Bakes Order</title>
-	<meta name="description" content="Georgina's kitchen provides its customers with the finest selection of cakes and treats in Galway. Order now">
+	<meta name="description"
+		content="Georgina's kitchen provides its customers with the finest selection of cakes and treats in Galway. Order now">
 </head>
 
 <body class="d-flex flex-column h-100">
-    <header class="navbar navbar-expand-sm navbar-dark">
-        <div class="container-fluid d-none d-sm-block">
-            <a class="navbar-brand" href="./index.html">
-                <img src="assets/logo.png" width="200" height="auto" alt="Georgina's kitchen logo.">
-            </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                <li class="nav-item">
-                    <a class="nav-link"href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./about-us.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./our-products.html">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active"  aria-current="true" href="./order-cake.html">Order</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+	<header class="navbar navbar-expand-sm navbar-dark">
+		<div class="container-fluid d-none d-sm-block">
+			<a class="navbar-brand" href="./index.html">
+				<img src="assets/logo.png" width="200" height="auto" alt="Georgina's kitchen logo.">
+			</a>
+		</div>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+			aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav me-auto mb-2 mb-sm-0">
+				<li class="nav-item">
+					<a class="nav-link" href="./index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./about-us.html">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./our-products.html">Products</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="./order-cake.html">Order</a>
+				</li>
+			</ul>
+		</div>
+	</header>
 	<div class="backDiv">
 		<div class="container">
-			<div class="text-center">
-				<h2> Order a cake </h2>
+			<div class="text-center pt-5">
+				<h1> Order a cake </h2>
 			</div>
 			<div class="row justify-content-md-center">
-				<div class="col-6">
+				<div class="col-8">
 					<form name="myForm" onsubmit="return validateForm()" method="post" required>
 						<div class="row mb-3">
-							<label for="firstname" class="col-sm-2 col-form-label"><b>First Name:</b></label>
-							<div class="col-sm-10">
-								<input type="text" name="firstname" size="50" />
+							<label for="firstname" class="col-sm-3 col-form-label"><strong>First Name:</strong></label>
+							<div class="col-sm-9">
+								<input type="text" id="firstname" name="firstname" size="50" />
 							</div>
 						</div>
-						<label class="surname"><b>Surname:</b></label>
-						<input type="text" name="surname" size="50" value="" />
-						<label class="number"><b>Phone number:</b></label>
-						<input type="text" name="number" size="50" value="" />
-						<label for="email"><b>E-mail Address:</b></label>
-						<input type="text" id="email" name="email" size="50">
-						<b>Cake:</b>
-						<select id="cake">
-							<option value="Cake6">Black Forest Gateaux</option>
-							<option value="Cake2">Carrot cake</option>
-							<option value="Cake1">Cheesecake</option>
-							<option value="Cake3">Red velvet</option>
-							<option value="Cake4">Tiramisu</option>
-							<option value="Cake5">Victoria Sponge</option>
-						</select>
-						<b>Size:</b>
-						<select id="size">
-							<option value="feeds6">feeds 8</option>
-							<option value="feeds12">feeds 12</option>
-						</select>
-						<b>Chocolate message:</b>
-						<select id="message">
-							<option value="No">No</option>
-							<option value="Yes">Yes</option>
-						</select>
-						<label class="choc"><b>Your message:</b></label>
-						<textarea name="choc" cols="25" rows="5"></textarea>
-						<b>Free topper:</b>
-						<select id="topper">
-							<option value="Happy Birthday">Happy Birthday</option>
-							<option value="Happy Aniversary">Happy Aniversary</option>
-							<option value="Congratulations">Congratulations</option>
-							<option value="Baby boy">Baby boy</option>
-							<option value="Baby girl">Baby girl</option>
-							<option value="None">None</option>
-						</select>
-						<b>Pick or Delivery:</b><br>*Galway city only(€5)
-						<select id="which">
-							<option value="pickup">Pick-up</option>
-							<option value="delivery">Delivery</option>
-							<b>Pick up/Delivery time:</b><br>*Next day
-							<select id="time">
+						<div class="row mb-3">
+							<label for="surname" class="col-sm-3 col-form-label"><strong>Surname:</strong></label>
+							<div class="col-sm-9">
+								<input type="text" id="surname" name="surname" size="50" />
+							</div>
+						</div>
+						<div class="row mb-3">
+
+							<label for="number" class="col-sm-3 col-form-label"><strong>Phone number:</strong></label>
+							<div class="col-sm-9">
+								<input type="text" id="number" name="number" size="50" />
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="email" class="col-sm-3 col-form-label"><strong>E-mail Address:</strong></label>
+							<div class="col-sm-9">
+								<input type="text" id="email" name="email" size="50">
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="cake" class="col-sm-3 col-form-label"><strong>Cake:</strong></label>
+							<div class="col-sm-9">
+								<select id="cake" class="form-select form-select-sm" name="cake">
+									<option value="Cake6">Black Forest Gateaux</option>
+									<option value="Cake2">Carrot cake</option>
+									<option value="Cake1">Cheesecake</option>
+									<option value="Cake3">Red velvet</option>
+									<option value="Cake4">Tiramisu</option>
+									<option value="Cake5">Victoria Sponge</option>
+								</select>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="size" class="col-sm-3 col-form-label"><strong>Size:</strong></label>
+							<div class="col-sm-9">
+								<select id="size" class="form-select form-select-sm" name="size">
+									<option value="feeds6">Feeds 8</option>
+									<option value="feeds12">Feeds 12</option>
+								</select>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="chocomessage" class="form-label">Chocolate message (optional):</label>
+							<textarea class="form-control" id="chocomessage" name="chocomessage" rows="5"></textarea>
+						</div>
+						<div class="row mb-3">
+							<label for="topper" class="col-sm-3 col-form-label"><strong>Free topper:</strong></label>
+							<div class="col-sm-9">
+								<select id="topper" name="topper" class="form-select form-select-sm">
+									<option value="None">None</option>
+									<option value="Happy Birthday">Happy Birthday</option>
+									<option value="Happy Aniversary">Happy Aniversary</option>
+									<option value="Congratulations">Congratulations</option>
+									<option value="Baby boy">Baby boy</option>
+									<option value="Baby girl">Baby girl</option>
+								</select>
+							</div>
+						</div>
+						<div class="row pb-3">
+							<div class="col-6">
+								<input class="form-check-input" type="radio" name="which" id="pickup" value="pickup"
+									checked>
+								<label class="form-check-label" for="exampleRadios1">
+									Pick Up
+								</label>
+							</div>
+							<div class="col-6">
+								<input class="form-check-input" type="radio" name="which" id="delivery"
+									value="delivery">
+								<label class="form-check-label" for="exampleRadios2">
+									Delivery (Galway city only - €5)
+								</label>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="time"  class="col-sm-3 col-form-label"><strong>Pick up/Delivery time</strong></label>
+							<div class="col-sm-5">
+								<input type="date" id="date" name="date">
+							</div>
+							<div class="col-sm-4">
+							<select id="time" name="time">
 								<option value="1">9am-11am</option>
 								<option value="2">11am-1pm</option>
 								<option value="3">1pm-3pm</option>
 								<option value="4">3pm-5pm</option>
 							</select>
-							<label class="housenumber"><b>Address 1:</b></label>
-							<input type="text" name="housenumber" size="50" value="" />
-							<label class="street"><b>Address 2:</b></label>
-							<input type="text" name="street" size="50" value="" />
-							<label class="city"><b>City:</b></label>
-							<input type="text" name="city" placeholder="Galway" size="50" value="" />
-							<input type="button" value="Calculate cost" onclick="myCal()"> </button>
+						</div>
+						</div>
+						<div class="row mb-3">
+							<label for="housenumber" class="col-sm-2 col-form-label"><strong>Address
+									1:</strong></label>
+							<div class="col-sm-10">
+								<input type="text" name="housenumber" id="housenumber" size="50" />
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="street" class="col-sm-2 col-form-label"><strong>Address 2:</strong></label>
+							<div class="col-sm-10">
+								<input type="text" name="street" id="street" size="50" />
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="city" class="col-sm-2 col-form-label"><strong>City:</strong></label>
+							<div class="col-sm-10">
+								<input type="text" name="city" placeholder="Galway" size="50" id="city"/>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-5 gap-2 d-grid">
+							<input type="button" class="btn btn-order" value="Calculate cost" onclick="myCal()">
+							</div>
+							<div class="col-2">
 							<p id="cal"></p>
-							<label class="form_submit"><b><input type="submit" value="Submit">
-									</tbody>
-									</table>
+						</div>
+						<div class="col-5 gap-2 d-grid">
+							<input class="btn-order-now btn" type="submit" value="Order">
+						</div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
-			<footer class="footer mt-auto py-3 text-center">
-				<!---
+	<footer class="footer mt-auto py-3 text-center">
+		<!---
           place for social networks
           <div class="underline"></div>
         -->
-				<div class="container">
-					<span>
-						Copyright &copy; 2021 Georgina's kitchen
-					</span>
-				</div>
+		<div class="container">
+			<span>
+				Copyright &copy; 2021 Georgina's kitchen
+			</span>
+		</div>
 	</footer>
 </body>
 <script>
@@ -139,7 +199,7 @@
 		var b = document.forms["myForm"]["surname"].value;
 		var a = document.forms["myForm"]["firstname"].value;
 		var d = document.forms["myForm"]["number"].value;
-		var e = document.forms["myForm"]["choc"].value;
+		var e = document.forms["myForm"]["chocomessage"].value;
 		var c = document.forms["myForm"]["email"].value;
 		var f = document.forms["myForm"]["housenumber"].value;
 		var g = document.forms["myForm"]["street"].value;
