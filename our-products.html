@@ -17,19 +17,31 @@
     <link rel="manifest" href="assets/site.webmanifest">
 </head>
 
-<body id="products">
-  <header>
-    <a class="logo" href="./index.html" title="Georgina's Kitchen.">
-      <img src="assets/logo.png" width="200" height="auto" alt="Georgina's kitchen logo.">
-    </a>
-    <nav class="float-end d-inline">
-      <ul>
-        <li><a class="active" href="./our-products.html">Products</a></li>
-        <li><a href="./order-cake.html">Order</a></li>
-        <li><a href="./about-us.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="d-flex flex-column h-100">
+    <header class="navbar navbar-expand-sm navbar-dark">
+        <div class="container-fluid d-none d-sm-block">
+            <a class="navbar-brand" href="./index.html">
+                <img src="assets/logo.png" width="200" height="auto" alt="Georgina's kitchen logo.">
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="./about-us.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./our-products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./order-cake.html">Order</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <main class="container-fluid">
         <div class="justify-content-md-center">
             <div class="row justify-content-md-center px-md-5 px-2">
@@ -127,12 +139,17 @@
             </div>
         </div>
     </main>
-    <footer>
-      <!---
-        place for social networks
-        <div class="underline"></div>
-      -->
-      <address>Copyright &copy; 2021 Georgina's kitchen</address>
-    </footer>
+    <footer class="footer mt-auto py-3 text-center">
+        <!---
+          place for social networks
+          <div class="underline"></div>
+        -->
+        <div class="container">
+          <span>
+            Copyright &copy; 2021 Georgina's kitchen
+          </span>
+        </div>
+      </footer>
 </body>
+
 </html>
