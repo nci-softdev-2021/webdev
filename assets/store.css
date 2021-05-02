@@ -105,13 +105,6 @@ p, a, label, input, span, small, td, address
 footer {
     background-color: var(--accent-bg-color);
 }
-footer .underline
-{
-    display: block;
-    border-width: 0;
-    border-bottom: 1px solid #fff;
-    margin: 0 16px;
-}
 
 #products footer
 {
