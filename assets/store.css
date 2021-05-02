@@ -102,6 +102,11 @@ p, a, label, input, span, small, td, address
     border-color: var(--secondary-color);
 }
 
+.btn-order:hover {
+    background-color: var(--secondary-accent-color);
+    border-color: var(--secondary-accent-color);
+}
+
 footer {
     background-color: var(--accent-bg-color);
 }
