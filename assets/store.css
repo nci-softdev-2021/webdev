@@ -1,96 +1,153 @@
-:root {
+:root
+{
     --main-bg-color: #fce9b5;
     --accent-bg-color: #936147;
 }
-
-h1, h2, h3 {
+h1, h2, h3
+{
     font-family: 'Dancing Script', cursive;
     color: var(--main-bg-color);
     padding-bottom: 5%;
 }
-
-* {
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+body
+{
     color: #000;
     background-color: var(--main-bg-color);
     font-family: 'Lato', sans-serif;
 }
-
-header {
+header
+{
     width: 100%;
     height: auto;
     display: inline-block;
     background-color: var(--accent-bg-color);
 }
-
-nav {
+nav
+{
     float: right;
 }
-
-nav ul li {
+nav ul li
+{
     float: left;
     display: inline-block;
 }
-
-nav ul li a {
+nav ul li a
+{
     color: #fff;
     font-size: 14pt;
     float: left;
     padding: 20px 8px;
     text-decoration: none;
 }
-
-nav ul li a:hover {
+nav ul li a:hover
+{
     color: #000;
 }
-
-.logo img {
+.logo img
+{
     float: left;
 }
-
-p, a, label, input, span, small, td, address {
+p, a, label, input, span, small, td, address
+{
     font-family: "Noto Sans SC", sans-serif;
 }
-
-.container {
+.container
+{
     width: 50%;
     height: auto;
     margin: 0 auto;
     position: absolute;
     left: 0;
-    transform: translate(50%, 50%);
+    transform: translate(50%, 0);
 }
-
-.showcase {
+.intro
+{
+  margin: 50px 0;
+  text-align: center;
+}
+.intro h1
+{
+  color: var(--accent-bg-color);
+  font-size: 40pt;
+  padding: 0;
+}
+.showcase
+{
     width: 50%;
-    height: 350px;
+    height: 400px;
     float: left;
     text-align: center;
     background-color: var(--accent-bg-color);
+    transition: 0.5s ease-in-out 0s;
 }
-
-.accent, .card {
+.showcase:nth-child(1)
+{
+  background: url("https://georgina.herokuapp.com/assets/cheesecake.jpg") 50% 50% / cover no-repeat #fff;
+}
+.showcase:nth-child(2)
+{
+  background: url("https://georgina.herokuapp.com/assets/carrot-cake-2.jpg") 50% 50% / cover no-repeat #fff;
+}
+.showcase h2
+{
+  font-size: 28pt;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+}
+.showcase:hover
+{
+  filter: sepia(1);
+}
+.accent, .card
+{
     background-color: var(--accent-bg-color);
 }
-
-footer {
+footer
+{
     position: fixed;
     bottom: 0;
     width: 100%;
-    color: #000;
+    color: #fff;
     padding: 8px 12px;
     background-color: var(--accent-bg-color);
     text-align: center;
 }
-
-footer .underline {
+footer .underline
+{
     display: block;
     border-width: 0;
     border-bottom: 1px solid #fff;
     margin: 0 16px;
+}
+#products footer
+{
+  position: static;
+}
+@media only screen and (max-width: 989px)
+{
+.container
+{
+  width: 100%;
+  transform: translate(0, 0);
+}
+}
+@media only screen and (max-width: 375px)
+{
+.showcase
+{
+  width: 100%;
+}
+.logo img
+{
+  float: none;
+  margin: 0 auto;
+  display: block;
+}
 }
