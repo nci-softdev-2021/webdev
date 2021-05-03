@@ -1,6 +1,4 @@
-let total;
-
- function JSalert(){
+ function JSalert(total){
  swal("The total cost of your order is" + " €" + total);
  }
 
@@ -13,7 +11,7 @@ function validateForm() {
     let housenumber = document.forms["myForm"]["housenumber"].value;
     let street = document.forms["myForm"]["street"].value;
     let city = document.forms["myForm"]["city"].value;
-    let i = "Galway";
+    const i = "Galway";
     let mailformat = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (firstname == "") {
         alert("Firstname must be filled out");
@@ -42,9 +40,9 @@ function validateForm() {
     } else if (!email.match(mailformat)) {
         alert("Enter a valid email");
         return false;
-    } else if (email.match(mailformat)) {
+    } else {
         let r = confirm("Would you like to confirm your order??");
-        if (r == true) {
+        if (r) {
             alert("You submitted order");
             return true;
         } else {
@@ -52,10 +50,10 @@ function validateForm() {
             return false;
         }
     }
-    return false;
 }
 
 function myCal() {
+    let total;
     switch (document.getElementById("cake").value) {
     case "Cake1":
         total = 14;
@@ -82,5 +80,5 @@ function myCal() {
     if (document.querySelector('input[name="which"]:checked').value === "delivery") {
         total = (total + 5);
     }
-    JSalert()
+    JSalert(total)
 }
