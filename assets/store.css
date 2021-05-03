@@ -154,6 +154,11 @@ footer {
   text-align: center;
 }
 
+.price {
+  color: var(--secondary-color);
+  text-align: center;
+}
+
 .backDiv {
   background: url("cake.jpg") 50% 0 no-repeat fixed;
   background-size: cover;
