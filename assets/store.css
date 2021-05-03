@@ -1,8 +1,8 @@
 :root {
   --main-bg-color: #fce9b5;
   --accent-bg-color: #936147;
-  --secondary-color: #F7EBD9;
-  --secondary-accent-color: #D39F79;
+  --secondary-color: #f7ebd9;
+  --secondary-accent-color: #d39f79;
 }
 
 h1, h2, h3 {
@@ -21,7 +21,7 @@ h2 {
 }
 
 body {
-  color: white;
+  color: #000;
   background-color: var(--main-bg-color);
   font-family: 'Lato', sans-serif;
   min-height: 100vh;
@@ -38,7 +38,7 @@ nav, .navbar-toggler {
 }
 
 a {
-  color: var(--secondary-color);
+  color: rgba(255,255,255,.55);
 }
 
 a:hover {
@@ -52,29 +52,30 @@ a:hover {
 p, a, label, input, span, small, td, address {
   font-family: "Noto Sans SC", sans-serif;
 }
-
+/*Intro contains the h1.*/
 .intro {
   margin: 50px 0 0;
   text-align: center;
 }
-
 .intro h1 {
   color: var(--accent-bg-color);
 }
-
+/*The showcase class container the bg cake images and its links.*/
 .showcase {
   width: 50%;
   height: 400px;
+  /*Float: to maintain it in line.*/
   float: left;
   text-align: center;
   background-color: var(--accent-bg-color);
+  /*Transition is to ease the hover effect of the sepia on the bg image.*/
   transition: 0.5s ease-in-out 0s;
 }
-
+/*Styles the first showcase class with a background image.*/
 .showcase:nth-child(1) {
   background: url("https://georgina.herokuapp.com/assets/cheesecake.jpg") 50% 50% / cover no-repeat #fff;
 }
-
+/*Styles the second showcase class with a different background image to the first.*/
 .showcase:nth-child(2) {
   background: url("https://georgina.herokuapp.com/assets/carrot-cake-2.jpg") 50% 50% / cover no-repeat #fff;
 }
@@ -84,7 +85,7 @@ p, a, label, input, span, small, td, address {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
 }
-
+/*Adds the sepia effect to the background image using the hover pseudo element.*/
 .showcase:hover {
   filter: sepia(1);
 }
@@ -101,7 +102,7 @@ p, a, label, input, span, small, td, address {
   color: var(--main-bg-color);
   font-weight: bolder;
   letter-spacing: 0.1vh;
- 
+
 }
 
 .btn-order {
@@ -123,22 +124,22 @@ p, a, label, input, span, small, td, address {
   background-color: var(--secondary-accent-color);
   border-color: var(--secondary-accent-color);
 }
-
+/*Style the footer with a bg colour.*/
 footer {
   background-color: var(--accent-bg-color);
 }
-
+/*Keeps the footer of the products page at the bottom of the page.*/
 #products footer {
   position: static;
 }
-
+/*Media query for a tablet-sized device.*/
 @media only screen and (max-width: 989px) {
   .container {
     width: 100%;
     transform: translate(0, 0);
   }
 }
-
+/*Media query for a small smartphone.*/
 @media only screen and (max-width: 375px) {
   .showcase {
     width: 100%;
