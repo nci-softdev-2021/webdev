@@ -109,8 +109,8 @@ p, a, label, input, span, small, td, address
 }
 
 .btn-order-now {
-    background-color: var(--accent-bg-color);
-    border-color: var(--accent-bg-color);
+    background-color: orange;
+    border-color: orange;
 }
 
 .btn-order-now:hover {
