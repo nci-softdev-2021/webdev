@@ -190,3 +190,7 @@ footer {
 .benefits {
   list-style-type: "🎂";
 }
+
+.info > a {
+  color: var(--accent-bg-color);
+}
