@@ -169,3 +169,7 @@ footer {
     width: 0;
     object-fit: cover;
   }
+
+  .benefits {
+      list-style-type: "🎂" ;
+  }
