@@ -12,7 +12,8 @@ function validateForm() {
     let street = document.forms["myForm"]["street"].value;
     let city = document.forms["myForm"]["city"].value;
     const i = "Galway";
-    let mailformat = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    // email validation regex
+    const mailformat = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (firstname == "") {
         alert("Firstname must be filled out");
         return false;
@@ -77,6 +78,7 @@ function myCal() {
         total = (total + 4);
     }
 
+    // check if delivery is selected
     if (document.querySelector('input[name="which"]:checked').value === "delivery") {
         total = (total + 5);
     }
