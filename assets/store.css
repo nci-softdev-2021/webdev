@@ -11,6 +11,15 @@ h1, h2, h3 {
   padding-bottom: 5%;
 }
 
+h1 {
+  font-size: 40pt;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 28pt;
+}
+
 body {
   color: #000;
   background-color: var(--main-bg-color);
@@ -32,7 +41,6 @@ a {
   color: rgba(255,255,255,.55);
 }
 
-
 a:hover {
   color: #000;
 }
@@ -52,8 +60,6 @@ p, a, label, input, span, small, td, address {
 
 .intro h1 {
   color: var(--accent-bg-color);
-  font-size: 40pt;
-  padding: 0;
 }
 
 .showcase {
@@ -74,7 +80,6 @@ p, a, label, input, span, small, td, address {
 }
 
 .showcase h2 {
-  font-size: 28pt;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
@@ -90,7 +95,6 @@ p, a, label, input, span, small, td, address {
 
 .accent h1 {
   color: var(--main-bg-color);
-  font-weight: bolder;
 }
 
 .subtitle {
@@ -153,6 +157,7 @@ footer {
 .backDiv {
   background: url("cake.jpg") 50% 0 no-repeat fixed;
   background-size: cover;
+  background-position: top;
   color: white;
 }
 
