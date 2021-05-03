@@ -30,13 +30,13 @@ function validateForm() {
     } else if (chocolateMessage.length > 30) {
         alert("Max 30 characters in message");
         return false;
-    } else if ((document.getElementById("which").value == "delivery") && ((housenumber == "") || (street == ""))) {
+    } else if ((document.querySelector('input[name="which"]:checked').value == "delivery") && ((housenumber == "") || (street == ""))) {
         alert("Please fill in address");
         return false;
-    } else if ((document.getElementById("which").value == "delivery") && city.toLowerCase() !== i.toLowerCase()) {
+    } else if ((document.querySelector('input[name="which"]:checked').value == "delivery") && city.toLowerCase() !== i.toLowerCase()) {
         alert("We only deliver within Galway city please make sure you have filled in 'Galway' for city");
         return false;
-    } else if ((document.getElementById("which").value == "pickup") && ((housenumber !== "") || (street !== "") || (city !== ""))) {
+    } else if ((document.querySelector('input[name="which"]:checked').value == "pickup") && ((housenumber !== "") || (street !== "") || (city !== ""))) {
         alert("You selected pick up. Please remove address or select 'delivery.'");
         return false;
     } else if (!email.match(mailformat)) {
@@ -52,6 +52,7 @@ function validateForm() {
             return false;
         }
     }
+    return false;
 }
 
 function myCal() {
