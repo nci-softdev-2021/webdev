@@ -1,3 +1,9 @@
+let total;
+
+ function JSalert(){
+ swal("The total cost of your order is" + " €" + total);
+ }
+
 function validateForm() {
     let surname = document.forms["myForm"]["surname"].value;
     let firstname = document.forms["myForm"]["firstname"].value;
@@ -49,7 +55,6 @@ function validateForm() {
 }
 
 function myCal() {
-    let total;
     switch (document.getElementById("cake").value) {
     case "Cake1":
         total = 14;
@@ -76,5 +81,5 @@ function myCal() {
     if (document.querySelector('input[name="which"]:checked').value === "delivery") {
         total = (total + 5);
     }
-    document.getElementById("cal").innerHTML = "Your total is €" + total;
+    JSalert()
 }
