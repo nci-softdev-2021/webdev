@@ -21,7 +21,7 @@ h2 {
 }
 
 body {
-  color: #000;
+  color: #fff;
   background-color: var(--main-bg-color);
   font-family: 'Lato', sans-serif;
   min-height: 100vh;
@@ -38,7 +38,7 @@ nav, .navbar-toggler {
 }
 
 a {
-  color: rgba(255,255,255,.55);
+  color: var(--secondary-color);
 }
 
 a:hover {
